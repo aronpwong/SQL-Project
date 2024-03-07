@@ -16,5 +16,13 @@ Data corruption and unauthorized changes to the data can lead to inaccuracy and 
 QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
+1. Data Profiling to help identify data quality issues in the existing tables
+```SELECT COUNT(*) FROM public.all_sessions```
 
-SELECT COUNT(*) FROM public.all_sessions
+2. Data Cleaning to help improve the data quality
+```UPDATE public.all_sessions SET city = 'not available in demo dataset' WHERE city IS NULL;```
+
+3. Data Validation to check the accuracy and integrity of data.
+4. Evaluation of data to ensure they answer the question sufficient enough
+5. Documenting the process when verifying the data and statements
+
